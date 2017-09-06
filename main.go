@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"github.com/finalsatan/aliyun_mns/sms"
+	"github.com/chainecho/aliyun_mns_sms/sms"
 	"io/ioutil"
 	"net/http"
 )
