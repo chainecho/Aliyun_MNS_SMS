@@ -83,8 +83,8 @@ func (client *Client) DoRequest(req *Request) (*http.Response, error) {
 	}
 
 	url := req.url()
-	fmt.Println("URL: ", url)
-	fmt.Println("DATA: ", string(payload))
+	//fmt.Println("URL: ", url)
+	//fmt.Println("DATA: ", string(payload))
 
 	hreq, err := http.NewRequest(req.method, url, reader)
 	if err != nil {
@@ -95,7 +95,7 @@ func (client *Client) DoRequest(req *Request) (*http.Response, error) {
 			hreq.Header.Set(k, v)
 		}
 	}
-	fmt.Println("Headers: ", hreq.Header)
+	//fmt.Println("Headers: ", hreq.Header)
 
 	resp, err := client.httpClient.Do(hreq)
 	if err != nil {
